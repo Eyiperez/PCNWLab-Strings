@@ -16,6 +16,15 @@
     @example - makeEven('john'); // 'john'
 */
 
+const makeEven = function (str){
+    if (str.length % 2 === 0){
+    //console.log('hello')
+    return str
+     } 
+     return `${str}#`
+}
+console.log(makeEven('taq'));
+console.log(makeEven('john'));
 
 /* 2
     @func getLastChar
@@ -24,6 +33,18 @@
     @desc - return the last character in string
     @example - getLastChar('taq'); // 'q'
 */
+
+const getLastChar = (str)=>(str[str.length-1]);
+
+/*const getLastChar = (str)=>{
+    //const lastChar= str.length-1
+    //return (str[lastChar]);
+    //return (str[str.length-1]);
+}
+*/
+console.log(getLastChar('taq'));
+console.log(getLastChar('erika'));
+
 
 /* 3
     @func get3rdChar
@@ -34,6 +55,16 @@
     @example - get3rdChar('mo'); // 'not enough characters!'
 */
 
+const get3rdChar = str=>{
+    if (str.length < 3) 
+    return 'not enough characters!'
+    return (str[2]);
+}
+
+console.log(get3rdChar('taq'));
+console.log(get3rdChar('mo'));
+console.log(get3rdChar('elephant'));
+
 /* 4
     @func get3rdCharFromEnd
     @param {string} str
@@ -43,6 +74,14 @@
     @example - get3rdCharFromEnd('mo'); // 'not enough characters!'
     @example - get3rdCharFromEnd('taq karim'); // 'r'
 */
+const get3rdCharFromEnd = str =>{
+    if (str.length < 3) 
+    return 'not enough characters!'
+    return (str[str.length-3]);
+}
+console.log(get3rdCharFromEnd('taq')); // 't'
+console.log(get3rdCharFromEnd('mo')); // 'not enough characters!'
+console.log(get3rdCharFromEnd('taq karim')); // 'r'
 
 /* 5
     @func startsWithVowel
@@ -54,6 +93,18 @@
     @example - startsWithVowel('andy'); // true
     @example - startsWithVowel('Andy'); // true
 */
+const startsWithVowel= (str)=>{
+    str=str.toLowerCase();
+if ((str[0]==='a')||(str[0]==='e')||(str[0]==='i')||(str[0]==='o')||(str[0]==='u'))
+    return true
+    return false
+}
+console.log(startsWithVowel('taq')); // false
+console.log(startsWithVowel('Dfghjkl')); // false
+console.log(startsWithVowel('andy')); // true
+console.log(startsWithVowel('Andy')); // true
+console.log(startsWithVowel('Endy')); // true
+
 
 /* 6
     @func endsWithVowel
@@ -65,6 +116,20 @@
     @example - endsWithVowel('andi'); // true
     @example - endsWithVowel('AndI'); // true
 */
+console.log('-----------------------------');
+
+const endsWithVowel=(str)=>{
+    str=str.toLowerCase();
+    const endsWith = (str[str.length-1])
+if ((endsWith==='a')||(endsWith==='e')||(endsWith==='i')||(endsWith==='o')||(endsWith==='u'))
+    return true
+    return false
+}
+console.log(endsWithVowel('taq')); // false
+console.log(endsWithVowel('Dfghjkl')); // false
+console.log(endsWithVowel('andi')); // true
+console.log(endsWithVowel('AndI')); // true
+console.log(endsWithVowel('Endo')); // true
 
 
 /* 7
