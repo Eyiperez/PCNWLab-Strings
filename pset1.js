@@ -142,6 +142,19 @@ console.log(endsWithVowel('Endo')); // true
     @example - hasVowels('dfghjkl'); // false
     @example - hasVowels('taq karim'); // true
 */
+console.log('-----problem7----');
+
+const hasVowels = str =>{
+    const findVowel = str.match(/['aeiouAEIOU']/);
+    if (findVowel){
+        return true
+    }
+    return false
+}
+console.log(hasVowels('taq')); // true
+console.log(hasVowels('TAQ')); // true
+console.log(hasVowels('dfghjkl')); // false
+console.log(hasVowels('taq karim')); // true
 
 
 /* 8
@@ -154,6 +167,36 @@ console.log(endsWithVowel('Endo')); // true
     @example - hasUpperCase('tag'); // false
     @example - hasUpperCase('taq karim'); // false
 */
+console.log('---problem8----');
+// this function only solves if all string is uppercase
+const isUpperCase =str =>{
+    if (str === str.toUpperCase()){
+        return true
+    }
+    return false
+}
+
+//const isUpperCase =str =>str === str.toUpperCase()) true:false
+
+console.log(isUpperCase('taq')); // false
+console.log(isUpperCase('TAQ')); // true
+console.log(isUpperCase('dfghjkl')); // false
+console.log(isUpperCase('AASDFGHJK')); // true
+
+// this is the function that solves problem 8
+console.log('----problem8real----');
+const hasUpperCase = str =>{
+    const findUppCase = (/[A-Z]/.test(str));
+    if (findUppCase){
+        return true
+    }
+    return false
+}
+
+console.log(hasUpperCase('tAq')); // true
+console.log(hasUpperCase('TAQ')); // true
+console.log(hasUpperCase('dfghjkl')); // false
+console.log(hasUpperCase('AASDhGHJK')); // true
 
 /* 9
     @func isPalindromic
@@ -165,6 +208,21 @@ console.log(endsWithVowel('Endo')); // true
     @example - isPalindromic('bats see bees stab'); // false
     @example - hasUpperCase('taq karim'); // false
 */
+console.log('----problem9----');
+
+const isPalindromic = str =>{
+    const reverse =str.split('').reverse().join('');
+    if (reverse===str){
+        return true
+    }
+    return false
+}
+
+console.log(isPalindromic('racecar')); // true
+console.log(isPalindromic('racecars')); // false
+console.log(isPalindromic('bats see bees stab')); // false
+console.log(hasUpperCase('taq karim')); // false
+
 
 /* 10
     @func getInitials
